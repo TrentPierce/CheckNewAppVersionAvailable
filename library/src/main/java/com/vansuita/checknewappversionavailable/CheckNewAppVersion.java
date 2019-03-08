@@ -109,18 +109,7 @@ public class CheckNewAppVersion extends AsyncTask<Void, Void, CheckNewAppVersion
         }
 
         public void openUpdateLink() {
-             new AlertDialog.Builder(CheckNewAppVersion.this)
-                        .setTitle("Update Available")
-                        .setMessage("Would you like to update this app?")
-
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getExternalAppLink())));
-                            }
-                        })
-                        .setNegativeButton(android.R.string.no, null)
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
+             context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getExternalAppLink())));
         }
 
         public Result(Context context, String newVersionCode, String oldVersionCode) {
