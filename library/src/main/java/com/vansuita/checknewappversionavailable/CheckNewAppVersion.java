@@ -109,7 +109,7 @@ public class CheckNewAppVersion extends AsyncTask<Void, Void, CheckNewAppVersion
         }
 
         public void openUpdateLink() {
-             new AlertDialog.Builder(getApplicationContext())
+             new AlertDialog.Builder(CheckNewAppVersion.this)
                         .setTitle("Update Available")
                         .setMessage("Would you like to update this app?")
 
